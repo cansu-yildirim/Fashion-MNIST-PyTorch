@@ -1,0 +1,136 @@
+# Derlenmiş / optimize edilmiş / DLL dosyaları
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Git deposunda izlenmemesi gereken dosyaları ve klasörleri belirtiriz
+
+# C uzantılı dosyalar
+*.so
+
+# Dağıtım / paketleme
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Genellikle bu dosyalar, PyInstaller exe'yi oluşturmadan önce bir şablon üzerinden bir Python betiği tarafından yazılır
+#  bu nedenle, içine tarih/diğer bilgiler enjekte edilir.
+*.manifest
+*.spec
+
+# Kurulumcu kayıtları
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Birim testi / kapsama raporları
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Çeviriler
+*.mo
+*.pot
+
+# Django işleri:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask işleri:
+instance/
+.webassets-cache
+
+# Scrapy işleri:
+.scrapy
+
+# Sphinx belgeleri
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+#   pypa/pipenv#598'ye göre, Pipfile.lock'un sürüm kontrolüne dahil edilmesi önerilir.
+#   Ancak, işbirliği durumunda, platforma özgü bağımlılıklar veya bağımlılıklar
+#   çapraz platform desteğine sahip olmadığından, pipenv çalışmayan bağımlılıkları kurabilir veya tüm gereken bağımlılıkları kurmayabilir.
+#Pipfile.lock
+
+# PEP 582; örn. github.com/David-OConnor/pyflow tarafından kullanılır
+__pypackages__/
+
+# Celery işleri
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath ayrıştırılmış dosyalar
+*.sage.py
+
+# Ortamlar
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder proje ayarları
+.spyderproject
+.spyproject
+
+# Rope proje ayarları
+.ropeproject
+
+# mkdocs belgeleri
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre tür denetleyicisi
+.pyre/
+
+.vscode/
+.DS_Store
+
+data/
+experiments/
