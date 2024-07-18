@@ -1,16 +1,14 @@
-# Fashion-MNIST ile Kıyafet Sınıflandırması
+# Clothes classification with Fashion-MNIST
 
-[Fashion-MNIST](https://github.com/cansuyildiim/fashion-mnist), kıyafet sınıflandırması için bir veri kümesidir. 10 farklı sınıftan oluşan 7.000 resim içerir ve bunlar eğitimde 60.000 ve testte 10.000 resim olarak ayrılmıştır. Derin öğrenme modelleri, [resmi ölçüm](https://github.com/cansuyildiriim/fashion-mnist#benchmark) olan yaklaşık %95 doğruluk oranına ulaşmaktadır. Benzer bir doğruluk elde eden ve "verimli" olan modelleri eğitmek ve bunları düzenli bir bilgisayarda kullanmak istiyoruz.
+[Fashion-MNIST](https://github.com/cansuyildiim/fashion-mnist), Fashion-MNIST is a dataset for clothing classification. It contains 70,000 images from 10 different classes, divided into 60,000 images for training and 10,000 images for testing. Deep learning models achieve an accuracy of approximately 95%, which is the official benchmark. We aim to train models that achieve similar accuracy and are ‘efficient’ to use on a regular computer.
+In this exploratory study, we have three different goals:
+Train different models using various model architectures and training strategies.
+Discuss the results of different experiments.
+Test the trained models using a demo with a webcam.
 
-Bu keşif çalışmasında üç farklı hedefimiz var:
+## Launch
 
-1. Farklı model mimarilerini ve eğitim stratejilerini kullanarak farklı modeller eğitmek.
-2. Farklı deneylerin sonuçlarını tartışmak.
-3. Eğitilmiş modelleri bir web kamerası ile bir demo kullanarak test etmek.
-
-## Kurulum
-
-En az **Python 3.6** sürümüne sahip izole bir Python ortamı kullanmanızı, örneğin [venv](https://docs.python.org/3/library/venv.html) veya [conda](https://docs.conda.io/en/latest/) öneriyoruz. Ardından, aşağıdaki kodları kullanarak kurulumu yapabilirsiniz:
+We recommend using an isolated Python environment with at least Python 3.6, such as venv or conda. Then, you can set it up using the following code:
 
 ```bash
 git clone https://github.com/cansuyildiriim/Fashion-MNIST-PyTorch.git
@@ -20,30 +18,34 @@ source .env/bin/activate
 pip install -r requirements.txt
 ```
 
-### PyTorch Kurulumu
+### PyTorch Installation
 
-PyTorch'un kurulumu her platform için farklı olduğundan, lütfen [PyTorch kurulum kılavuzuna](https://pytorch.org/get-started/locally/) göz atın.
+Since the installation of [PyTorch](https://pytorch.org/get-started/locally/) varies for each platform, please refer to the PyTorch installation guide.
 
-## Kullanım
+## Usage
 
-Kurulum işlemi tamamlandıktan sonra, farklı deneylerin sonuçlarını çoğaltmak için `train_fashionMNIST.py` betiğini kullanın.
+After completing the setup, use the `train_fashionMNIST.py` script to replicate the results of different experiments.
 
+### Project Structure
 
-### Proje Yapısı
+The project contains five different folders:
+data: This directory is created when the train_fashionMNIST.py script is run for the first time. It contains the training and test datasets of Fashion MNIST.
+demo: This directory contains all the code for the demo.
+experiments: This directory is created when the train_fashionMNIST.py script is run for the first time. It contains the results of the experiments. Placing trained models in this directory allows you to use them with the demo.
+images: This directory contains the images used in this README file.
+models: This directory contains the architecture of the models and the definition of the labels.
 
-Proje beş farklı klasör içerir:
-
-- **data** : Bu dizin `train_fashionMNIST.py` betiği ilk kez çalıştırıldığında oluşturulur. Fashion MNIST'in eğitim ve test veri kümelerini içerir.
-- **demo** : Bu dizin demo için tüm kodları içerir.
-- **experiments** : Bu dizin `train_fashionMNIST.py` betiği ilk kez çalıştırıldığında oluşturulur. Deneylerin sonuçlarını içerir. Eğitilmiş modelleri bu dizine koymak onları demo ile kullanmanızı sağlar.
-- **images** : Bu dizin bu README dosyasında kullanılan resimleri içerir.
-- **models** : Bu dizin modellerin mimarisi ve etiketlerin tanımını içerir.
+- **data:** This directory is created when the train_fashionMNIST.py script is run for the first time. It contains the training and test datasets of Fashion MNIST.
+- **demo:** This directory contains all the code for the demo.
+- **experiments: This directory is created when the train_fashionMNIST.py script is run for the first time. It contains the results of the experiments. Placing trained models in this directory allows you to use them with the demo.
+- **images:** This directory contains the images used in this README file.
+- **models:** This directory contains the architecture of the models and the definition of the labels
 
 ## Demo
 
-Bu projede gerçek zamanlı görüntü işleme için bir demo uygulaması bulunmaktadır. Demo uygulamasını çalıştırmak için run_inference.py adlı bir Python betiği kullanılıyor. Bu betik eğitilmiş modelleri kullanarak görüntü sınıflandırması yapıyor ve sonuçları ekranda gösteriyor.
+In this project, there is a demo application for real-time image processing. To run the demo application, a Python script named `run_inference.py` is used. This script performs image classification using trained models and displays the results on the screen.
 
-Demo'yu çalıştırmak için aşağıdaki komutları kullanın:
+Use the following commands to run the demo:
 
 ```bash
 cd demo
