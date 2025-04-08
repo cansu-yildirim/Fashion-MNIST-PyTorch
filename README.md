@@ -1,14 +1,14 @@
 # Clothes classification with Fashion-MNIST
 
-[Fashion-MNIST](https://github.com/cansuyildiim/fashion-mnist), Fashion-MNIST is a dataset for clothing classification. It contains 70,000 images from 10 different classes, divided into 60,000 images for training and 10,000 images for testing. Deep learning models achieve an accuracy of approximately 95%, which is the official benchmark. We aim to train models that achieve similar accuracy and are ‘efficient’ to use on a regular computer.
-In this exploratory study, we have three different goals:
+[Fashion-MNIST](https://github.com/cansuyildiim/fashion-mnist), Fashion-MNIST is a dataset for clothing classification. It contains 70,000 images from 10 different classes, divided into 60,000 images for training and 10,000 images for testing. Deep learning models achieve an accuracy of approximately 95%, which is the official benchmark. I aim to train models that achieve similar accuracy and are ‘efficient’ to use on a regular computer.
+In this exploratory study, I have three different goals:
 Train different models using various model architectures and training strategies.
 Discuss the results of different experiments.
 Test the trained models using a demo with a webcam.
 
 ## Launch
 
-We recommend using an isolated Python environment with at least Python 3.6, such as venv or conda. Then, you can set it up using the following code:
+I recommend using an isolated Python environment with at least Python 3.6, such as venv or conda. Then, you can set it up using the following code:
 
 ```bash
 git clone https://github.com/cansuyildiriim/Fashion-MNIST-PyTorch.git
@@ -58,3 +58,13 @@ pip install -r requirements
 cd demo
 python run_inference.py --model SimpleCNNModel --weights_path ../demo/experiments/01_SimpleCNNModel/model_best.pth.tar --display_input --display_fps --device 0
 ```
+### 🎥 Project Demo Video
+
+I have created a short demo video to showcase how this project works in practice.  
+In this video, you will see how different deep learning models were trained using the Fashion-MNIST dataset and how the real-time clothing classification demo performs using a webcam.
+
+- [Watch the video on YouTube](https://www.youtube.com/watch?v=mHhbzsuf5yo)
+
+[![Watch the video](https://img.youtube.com/vi/mHhbzsuf5yo/0.jpg)](https://www.youtube.com/watch?v=mHhbzsuf5yo)
+
+
